@@ -23,10 +23,14 @@ repo init --depth=1 --no-repo-verify -u https://github.com/crdroidandroid/androi
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j10
 
 # extra 
-rm -rf hardware/qcom-caf/msm8998/display hardware/qcom-caf/msm8998/audio hardware/qcom-caf/msm8998/media
+rm -rf hardware/qcom-caf/msm8998/display hardware/qcom-caf/msm8998/audio hardware/qcom-caf/msm8998/media external/chromium-webview/prebuilt/arm  external/chromium-webview/prebuilt/arm64 external/chromium-webview/prebuilt/x86 external/chromium-webview/prebuilt/x86_64 
 git clone -b arrow-13.1-caf-msm8998 https://github.com/ArrowOS/android_hardware_qcom_display hardware/qcom-caf/msm8998/display
 git clone -b arrow-13.1-caf-msm8998 https://github.com/ArrowOS/android_hardware_qcom_audio hardware/qcom-caf/msm8998/audio
 git clone -b arrow-13.1-caf-msm8998 https://github.com/ArrowOS/android_hardware_qcom_media hardware/qcom-caf/msm8998/media
+git clone -b main https://github.com/LineageOS/android_external_chromium-webview_prebuilt_x86_64 external/chromium-webview/prebuilt/x86_64
+git clone -b main https://github.com/LineageOS/android_external_chromium-webview_prebuilt_x86 external/chromium-webview/prebuilt/x86
+git clone -b main https://github.com/LineageOS/android_external_chromium-webview_prebuilt_arm64 external/chromium-webview/prebuilt/arm64
+git clone -b main https://github.com/LineageOS/android_external_chromium-webview_prebuilt_arm external/chromium-webview/prebuilt/arm
 
 #clang
 git clone --depth=1 -b nexus-14 https://gitlab.com/Project-Nexus/nexus-clang.git prebuilts/clang/host/linux-x86/clang-nexus
