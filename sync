@@ -30,7 +30,8 @@ rm -rf hardware/qcom-caf/msm8998/display hardware/qcom-caf/msm8998/audio hardwar
 git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_display hardware/qcom-caf/msm8998/display
 git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_audio hardware/qcom-caf/msm8998/audio
 git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_media hardware/qcom-caf/msm8998/media
-git clone --depth=1 https://github.com/Prashant-1695/android_frameworks_base-1 frameworks/base
+git clone -b 13.0 https://github.com/crdroidandroid/android_frameworks_base frameworks/base
+cd frameworks/base && git fetch https://github.com/Prashant-1695/android_frameworks_base-1 13.0 && git cherry-pick 754f259
 
 #clang
 git clone --depth=1 -b nexus-14 https://gitlab.com/Project-Nexus/nexus-clang.git prebuilts/clang/host/linux-x86/clang-nexus
