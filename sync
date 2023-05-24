@@ -36,8 +36,8 @@ git clone --depth=1 https://github.com/Prashant-1695/android_frameworks_base-1 f
 git clone --depth=1 -b nexus-14 https://gitlab.com/Project-Nexus/nexus-clang.git prebuilts/clang/host/linux-x86/clang-nexus
 
 # tree
-git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/device_xiaomi_lavender device/xiaomi/lavender -b lineage
-git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/android_vendor_xiaomi_lavender vendor/xiaomi/lavender -b 13-4.4
+git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/device_xiaomi_lavender device/xiaomi/lavender -b cmn
+git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/android_vendor_xiaomi_lavender vendor/xiaomi/lavender -b cmn
 git clone --depth=1 https://github.com/projects-nexus/nexus_kernel_xiaomi_lavender kernel/xiaomi/lavender -b los
 
 # patch
