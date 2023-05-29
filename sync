@@ -15,25 +15,24 @@ bash ~/git_cookies.sh
 
 fi
 
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-sudo apt-get install git-lfs
+#curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+#sudo apt-get install git-lfs
 
 # Sync source
-repo init --depth=1 --no-repo-verify -u https://github.com/crdroidandroid/android.git -b 13.0 --git-lfs -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/PixelExperience/manifest.git -b twelve-plus --git-lfs -g default,-mips,-darwin,-notdefault
 #git clone https://github.com/Prashant-1695/local_manifest.git --depth 1 -b crdroid .repo/local_manifests
 
 # Sync source without unnecessary messages, try with -j30 first, if fails, it will try again
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j10
 
 # extras
-rm -rf hardware/qcom-caf/msm8998/display hardware/qcom-caf/msm8998/audio hardware/qcom-caf/msm8998/media frameworks/base
-git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_display hardware/qcom-caf/msm8998/display
-git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_audio hardware/qcom-caf/msm8998/audio
-git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_media hardware/qcom-caf/msm8998/media
-git clone --depth=1 https://github.com/Prashant-1695/android_frameworks_base-1 frameworks/base
+#rm -rf hardware/qcom-caf/msm8998/display hardware/qcom-caf/msm8998/audio hardware/qcom-caf/msm8998/media
+#git clone -b arrow-12.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_display hardware/qcom-caf/msm8998/display
+#git clone -b arrow-12.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_audio hardware/qcom-caf/msm8998/audio
+#git clone -b arrow-12.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_media hardware/qcom-caf/msm8998/media
 
 #clang
-git clone --depth=1 -b nexus-14 https://gitlab.com/Project-Nexus/nexus-clang.git prebuilts/clang/host/linux-x86/clang-nexus
+#git clone --depth=1 -b nexus-14 https://gitlab.com/Project-Nexus/nexus-clang.git prebuilts/clang/host/linux-x86/clang-nexus
 
 # tree
 git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/device_xiaomi_lavender device/xiaomi/lavender -b cmn
