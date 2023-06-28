@@ -27,7 +27,7 @@ git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android
 git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_audio hardware/qcom-caf/msm8998/audio
 git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_media hardware/qcom-caf/msm8998/media
 # git clone -b awaken --depth=1 https://github.com/Prashant-1695/bionic bionic
-## rm -rf external/rsync
+# rm -rf external/rsync
 # git clone -b lineage-20.0 https://github.com/LineageOS/android_external_rsync external/rsync
 
 # tree
