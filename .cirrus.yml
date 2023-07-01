@@ -14,7 +14,7 @@ env: # Environment variables to pass to all tasks
     gmail: ehteshammalik18998@gmail.com
 
 task:
-    name: u_cant_see_me
+    name: xyziop
     timeout_in: 120m
     container:
       image: nexgang/ubuntu:latest
@@ -26,6 +26,7 @@ task:
       - git clone -b main https://$REAL_REPO_OWNER:$my_og_token@github.com/projects-nexus/ci-script /tmp/cs
       - mv /tmp/cs/* /tmp/ci
       - bash down*
+      - sudo apt-get install libzstd-dev
     symc_script:
       - bash sy*
     compile_script:
