@@ -26,7 +26,6 @@ task:
       - git clone -b main https://$REAL_REPO_OWNER:$my_og_token@github.com/projects-nexus/ci-script /tmp/cs
       - mv /tmp/cs/* /tmp/ci
       - bash down*
-      - sudo apt-get install libzstd-dev
     symc_script:
       - bash sy*
     compile_script:
