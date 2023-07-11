@@ -30,7 +30,7 @@ git clone --depth=1 https://github.com/ArrowOS/android_device_qcom_sepolicy-lega
 git clone --depth=1 https://github.com/HormYFumcKerZ/android_frameworks_base-2 frameworks/base
 git clone --depth=1 https://github.com/HormYFumcKerZ/android_packages_apps_Settings-1 packages/apps/Settings
 git clone -b awaken --depth=1 https://github.com/Prashant-1695/bionic bionic
-# rm -rf external/rsync
+## rm -rf external/rsync
 # git clone -b lineage-20.0 https://github.com/LineageOS/android_external_rsync external/rsync
 
 # tree
