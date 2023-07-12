@@ -22,13 +22,13 @@ repo init --depth=1 --no-repo-verify -u https://github.com/HormYFumcKerZ/android
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j10
 
 # extras
-rm -rf hardware/qcom-caf/msm8998/display hardware/qcom-caf/msm8998/audio hardware/qcom-caf/msm8998/media bionic device/qcom/sepolicy-legacy-um packages/apps/Settings frameworks/base
+rm -rf hardware/qcom-caf/msm8998/display hardware/qcom-caf/msm8998/audio hardware/qcom-caf/msm8998/media bionic device/qcom/sepolicy-legacy-um
 git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_display hardware/qcom-caf/msm8998/display
 git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_audio hardware/qcom-caf/msm8998/audio
 git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_media hardware/qcom-caf/msm8998/media
 git clone --depth=1 https://github.com/ArrowOS/android_device_qcom_sepolicy-legacy-um device/qcom/sepolicy-legacy-um -b arrow-13.1
-git clone --depth=1 https://github.com/HormYFumcKerZ/android_frameworks_base-2 frameworks/base
-git clone --depth=1 https://github.com/HormYFumcKerZ/android_packages_apps_Settings-1 packages/apps/Settings
+# git clone --depth=1 https://github.com/HormYFumcKerZ/android_frameworks_base-2 frameworks/base
+# git clone --depth=1 https://github.com/HormYFumcKerZ/android_packages_apps_Settings-1 packages/apps/Settings
 git clone -b awaken --depth=1 https://github.com/Prashant-1695/bionic bionic
 ## rm -rf external/rsync
 # git clone -b lineage-20.0 https://github.com/LineageOS/android_external_rsync external/rsync
