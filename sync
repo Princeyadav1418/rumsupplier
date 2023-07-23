@@ -16,27 +16,23 @@ bash ~/git_cookies.sh
 fi
 
 # Sync source
-repo init --depth=1 --no-repo-verify -u https://github.com/HormYFumcKerZ/android_manifest.git -b triton --git-lfs -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/protonplus-org/manifest.git -b tm-qpr3 -g default,-mips,-darwin,-notdefault
 
 # Sync source without unnecessary messages, try with -j30 first, if fails, it will try again
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j10
 
 # extras
-rm -rf hardware/qcom-caf/msm8998/display hardware/qcom-caf/msm8998/audio hardware/qcom-caf/msm8998/media bionic device/qcom/sepolicy-legacy-um
+rm -rf hardware/qcom-caf/msm8998/display hardware/qcom-caf/msm8998/audio hardware/qcom-caf/msm8998/media bionic packages/resources/devicesettings
 git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_display hardware/qcom-caf/msm8998/display
 git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_audio hardware/qcom-caf/msm8998/audio
 git clone -b arrow-13.1-caf-msm8998 --depth=1 https://github.com/ArrowOS/android_hardware_qcom_media hardware/qcom-caf/msm8998/media
-git clone --depth=1 https://github.com/ArrowOS/android_device_qcom_sepolicy-legacy-um device/qcom/sepolicy-legacy-um -b arrow-13.1
-# git clone --depth=1 https://github.com/HormYFumcKerZ/android_frameworks_base-2 frameworks/base
-# git clone --depth=1 https://github.com/HormYFumcKerZ/android_packages_apps_Settings-1 packages/apps/Settings
-git clone -b awaken --depth=1 https://github.com/Prashant-1695/bionic bionic
-# rm -rf external/rsync
-## git clone -b lineage-20.0 https://github.com/LineageOS/android_external_rsync external/rsync
+git clone -b proton --depth=1 https://github.com/Prashant-1695/bionic bionic
+git clone -b lineage-20.0 --depth=1 https://github.com/LineageOS/android_packages_resources_devicesettings packages/resources/devicesettings 
 
 # tree
 git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/device_xiaomi_lavender device/xiaomi/lavender -b aosp
 git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/android_vendor_xiaomi_lavender vendor/xiaomi/lavender -b 13-4.4
-git clone --depth=1 https://github.com/projects-nexus/nexus_kernel_xiaomi_lavender kernel/xiaomi/lavender -b qti-old
+git clone --depth=1 https://github.com/projects-nexus/nexus_kernel_xiaomi_lavender kernel/xiaomi/lavender -b 13-NKSU
 
 . /tmp/ci/function
 tg "$rom_name source sync completed!
