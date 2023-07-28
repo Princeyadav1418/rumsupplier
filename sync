@@ -24,7 +24,7 @@ repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync 
 # tree
 git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/device_xiaomi_lavender device/xiaomi/lavender -b 13-4.19
 git clone --depth=1 https://wHo-EM-i:$my_og_token@github.com/wHo-EM-i/vendor_lavender vendor/xiaomi/lavender -b 13
-git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/device_common device/xiaomi/sdm660-common -b 13
+git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/device_common device/xiaomi/sdm660-common -b master
 git clone --depth=1 https://wHo-EM-i:$my_og_token@github.com/wHo-EM-i/vendor_xiaomi_sdm660-common vendor/xiaomi/sdm660-common -b 13
 
 git clone --depth=1 https://github.com/ImSpiDy/kernel_xiaomi_lavender-4.19 kernel/xiaomi/sdm660 -b 13-Retro
