@@ -17,5 +17,5 @@ export WITH_GAPPS=true
 }
 
 compile_plox () {
-m bacon
+make bacon -j10
 }
