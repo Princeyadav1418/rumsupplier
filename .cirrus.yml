@@ -8,7 +8,7 @@ env: # Environment variables to pass to all tasks
     bot_api: "ENCRYPTED[e7d3de2df978887652f3f200bd3b349b1cc885340e46d5a6d7b8cc4d97b0fbaf2d4d11a5c5543fb3139b5b6ca570765a]"
     chat_id: "ENCRYPTED[e600a076c29cec0c40df926ff02ba4eb550edbd3711d5bdd5c9355ef9e9ef9e52c68de042ec7a877a1e280b3e87d323e]"
     v_core: "16"
-    s_core: "16"
+    s_core: "10"
     ext: "-4.19" # extend rom_name to avoid cache conflicts
     du_key: 0
     git_cookies: 0
