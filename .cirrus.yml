@@ -12,6 +12,7 @@ env: # Environment variables to pass to all tasks
     s_core: "16"
     ext: "-4.19" # extend rom_name to avoid cache conflicts
     du_key: 0
+    git_cookies: 0
     REAL_REPO_OWNER: "ENCRYPTED[0627f7a8a95cb75e2ef7cbb8aa92a333082f43c42447d4f5ad3006b9860f51ff2291e4c16a186ab9eb602ad745fcb71e]" # main id
 
 # store information about git here
