@@ -16,16 +16,16 @@ bash ~/git_cookies.sh
 fi
 
 # Sync source
-repo init --depth=1 --no-repo-verify -u https://github.com/Project-LegionOS/manifest.git -b s -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify -u https://github.com/Evolution-X/manifest.git -b tiramisu -g default,-mips,-darwin,-notdefault
 
 # Sync source without unnecessary messages, try with -j16 first, if fails, it will try again
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j16 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j10
 
 # tree
-git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/device_xiaomi_lavender device/xiaomi/lavender -b 13-4.19
+git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/device_xiaomi_lavender device/xiaomi/lavender -b T-4.19
 git clone --depth=1 https://wHo-EM-i:$my_og_token@github.com/wHo-EM-i/vendor_lavender vendor/xiaomi/lavender -b 13
-git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/device_common device/xiaomi/sdm660-common -b mi
-git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/vendor_common vendor/xiaomi/sdm660-common -b master
+git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/device_common device/xiaomi/sdm660-common -b 13-misound
+git clone --depth=1 https://Prashant-1695:$my_og_token@github.com/Prashant-1695/vendor_common vendor/xiaomi/sdm660-common -b 13-misound
 
 git clone --depth=1 https://github.com/ImSpiDy/kernel_xiaomi_lavender-4.19 kernel/xiaomi/sdm660 -b 13-Retro
 
@@ -61,8 +61,8 @@ git clone --depth=1 https://github.com/wHo-EM-i/android_hardware_qcom_media hard
 #git clone --depth=1 https://github.com/Nub-XD/vendor_qcom_opensource_power /tmp/rom/vendor/qcom/opensource/power -b t
 
 # patch
-rm -rf /tmp/rom/bionic
-git clone --depth=1 https://github.com/Prashant-1695/bionic -b legion
+#rm -rf /tmp/rom/bionic
+#git clone --depth=1 https://github.com/Prashant-1695/bionic -b legion
 #cd /tmp/rom/bionic
 # curl https://github.com/wHo-EM-i/bionic/commit/9e3a6c972f82910d2ae0faf56b8db3a0c2bd83a6.patch | git am #revert lib for jemalloc
 # curl https://github.com/wHo-EM-i/bionic/commit/2a8b590dfe23620be18a535420af6a5f7ebaae16.patch | git am #jemalloc
