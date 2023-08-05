@@ -24,5 +24,5 @@ export BLISS_BUILD_VARIANT=gapps
 
 compile_plox () {
 mka evolution -j17
-mv out/target/product/lavender/*lavender-ota*.zip out/target/product/lavender/evolution_lavender.zip
+mv out/target/product/lavender/*lavender-ota*.zip out/target/product/lavender/evolutionX_lavender-k4.19-2023.zip
 }
