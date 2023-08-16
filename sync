@@ -77,7 +77,6 @@ git clone --depth=1 https://github.com/wHo-EM-i/android_hardware_qcom_media hard
 #cd /tmp/rom/system/libhidl && curl https://github.com/ArrowOS/android_system_libhidl/commit/fbdf10a33f546d202ae12b4b864177fea9faa998.patch | git am
 #cd /tmp/rom/device/qcom/common && sed -i 's|include device/qcom/sepolicy-legacy/SEPolicy.mk|-include device/qcom/sepolicy-legacy/SEPolicy.mk|' B*Qcom.mk
 
-
 . /tmp/ci/function
 tg "$rom_name source sync completed!
 Total Size: $(du -sh /tmp/rom | cut -d - -f 1 | cut -d / -f 1)
