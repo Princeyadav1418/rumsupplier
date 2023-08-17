@@ -9,7 +9,7 @@ env: # Environment variables to pass to all tasks
     chat_id: "ENCRYPTED[36a4cc5d226f1de73c6067976c459f6cc7134e61936b8405018f6c16d1542adba0165c767a99cd618d4d906b392903cf]"
     git_cookies: 0
     v_core: "16"
-    s_core: "10"
+    s_core: "16"
     ext: "-4.19" # extend rom_name to avoid cache conflicts
     du_key: 0
     git_cookies: 0
