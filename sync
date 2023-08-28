@@ -38,6 +38,9 @@ git clone --depth=1 https://github.com/ArrowOS/android_device_qcom_sepolicy-lega
 #rm -rf /tmp/rom/device/xiaomi/lavender/libhidl
 rm -rf /tmp/rom/hardware/xiaomi/megvii/*.bp
 
+rm -rf device/lineage/sepolicy
+git clone --depth=1 https://github.com/Prashant-1695/android_device_havoc_sepolicy device/lineage/sepolicy
+
 # DeviceSettings
 #rm -rf packages/resources/devicesettings
 #git clone -b lineage-20.0 --depth=1 https://github.com/LineageOS/android_packages_resources_devicesettings packages/resources/devicesettings
