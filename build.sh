@@ -2,13 +2,14 @@
 . build/envsetup.sh
 lunch lineage_lavender-userdebug
 
-build_gapps=1
+build_gapps=0
 
 # export variable here
 export TZ=Asia/Kolkata
 export SELINUX_IGNORE_NEVERALLOWS=true
 #export BUILD_BROKEN_DUP_RULES=true
 export RELAX_USES_LIBRARY_CHECK=true
+export WITH_GMS=true
 
 exp_gapps() {
 export TARGET_GAPPS_ARCH=arm64
