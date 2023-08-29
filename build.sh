@@ -1,6 +1,6 @@
 # Normal build steps
 . build/envsetup.sh
-lunch havoc_lavender-userdebug
+lunch havoc_santoni-userdebug
 
 # export variable here
 export TZ=Asia/Kolkata
