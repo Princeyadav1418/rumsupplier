@@ -1,17 +1,14 @@
 # Normal build steps
 . build/envsetup.sh
-lunch evolution_lavender-userdebug
+lunch colt_lavender-userdebug
 
-build_gapps=0
+build_gapps=1
 
 # export variable here
 export TZ=Asia/Kolkata
 export SELINUX_IGNORE_NEVERALLOWS=true
 #export BUILD_BROKEN_DUP_RULES=true
 export RELAX_USES_LIBRARY_CHECK=true
-export WITH_GMS=true
-export EVO_BUILD_TYPE=K4.19
-export TARGET_USES_MINI_GAPPS=true
 
 exp_gapps() {
 export TARGET_GAPPS_ARCH=arm64
@@ -23,6 +20,5 @@ export BLISS_BUILD_VARIANT=gapps
 }
 
 compile_plox () {
-mka evolution -j17
-mv out/target/product/lavender/*lavender-ota*.zip out/target/product/lavender/evolutionX_lavender-k4.19-2023.zip
+make colt -j10
 }
